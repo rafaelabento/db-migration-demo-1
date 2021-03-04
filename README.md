@@ -2,13 +2,13 @@
 
 ## Instalação `Node.js`
 
-1 - Acesse https://nodejs.org e baixe a útlima versão LTS do Node.js
-2 - Proceda com o wizard de instalação até o fim mantendo as configurações padrão
-3 - Verifique sua instalação executando no terminal `node -v`
+1 - Acesse <https://nodejs.org> e baixe a útlima versão LTS do Node.js
+1 - Proceda com o wizard de instalação até o fim mantendo as configurações padrão
+1 - Verifique sua instalação executando no terminal `node -v`
 
 ## Instalação `PowerShell` (apenas usuários Windows)
 
-1- Acesse https://github.com/PowerShell/PowerShell/releases/tag/v7.1.2 e baixe a última versão (arquivo `.msi`)
+1- Acesse <https://github.com/PowerShell/PowerShell/releases/tag/v7.1.2> e baixe a última versão (arquivo `.msi`)
 2- Execute o instalador e proceda com o wizard de instalação até o fim mantendo as configurações padrão
 
 ## Instalação `db-migrate`
