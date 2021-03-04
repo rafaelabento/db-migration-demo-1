@@ -218,5 +218,7 @@ exports.down = function (db, callback) {
 Execute `db-migrate up` para validar as migrações
 
 ```bash
-
+db-migrate up
+[INFO] Processed migration 20210304224409-update-user
+[INFO] Done
 ```
