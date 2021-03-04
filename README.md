@@ -83,8 +83,19 @@ Em seguida serão criados diretórios e arquivos padrão para o projeto e també
     "host": "localhost",
     "port": "3306",
     "user": "root",
-    "password": "<sua_senha",
-    "database": "payment_api"
+    "password": "<sua_senha>",
+    "database": "db-migration-demo"
   }
 }
 ```
+
+## Criando um novo script de migração
+
+- Podemos criar um novo script de migração executando o seguinte comando:
+
+```bash
+db-migrate create user
+[INFO] Created migration at /db-migration-demo/db-migration-demo/migrations/20210304212353-user.js
+```
+
+Um script de migração representa uma nova versão, ou estado, do nosso banco de dados. Após executar o comando acima, um novo diretório é criado, contendo um novo arquivo `.js`.
