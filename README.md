@@ -101,3 +101,59 @@ db-migrate create user
 Um script de migração representa uma nova versão, ou estado, do nosso banco de dados. Após executar o comando acima, um novo diretório é criado, contendo um novo arquivo `.js`.
 
 ![image](https://user-images.githubusercontent.com/609076/110032821-5e9d0280-7d17-11eb-9be9-47b1f440065b.png)
+
+### Criando uma nova tabela de Usuários
+
+Vamos criar uma nova tabela usando nosso script de migração. Altere o arquivo de migração para que as funções ```javascript exports.up``` e ```javascript exports.up``` tenham o seguinte conteúdo:
+
+```javascript
+exports.up = function(db, callback) {
+  db.createTable('user', {
+    id: {
+      type: 'int',
+      primaryKey: true
+    },
+    full_name: {
+      type: 'string',
+      length: 40
+    },
+    dob: {
+      type: 'date'
+    },
+    email: {
+      type: 'string',
+      length: 50
+    },
+  }, function(err) {
+    if (err) return callback(err);
+    return callback();
+  });
+};
+exports.down = function(db, callback) {
+  db.dropTable('user', callback);
+};
+```
+
+Este script deve criar uma nova tabela quando nós movemos a versão do banco de dados para a frente (`up`) e deletar a tabela quando revertermos (`down`).
+
+- Execute `db-migrate up` para testar o script.
+  - Caso o script lance um erro de conexão, execute as seguintes queries
+    - `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'` - substituia `password` pela sua senha do BD
+    - `flush privileges;`
+
+Você receberá a seguinte confirmação:
+
+```bash
+db-migrate up
+[INFO] Processed migration 20210304212353-user
+[INFO] Done
+```
+
+Caso você execute novamente `db-migrate up` verá que a migração não será executada, retornando o status:
+
+```bash
+[INFO] No migrations to run
+[INFO] Done
+```
+
+Isto porque o `db-migrate` framework monitora quais scripts foram executados em uma tabela separada chamada `migrations`.

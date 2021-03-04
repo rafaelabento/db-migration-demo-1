@@ -14,12 +14,34 @@ exports.setup = function(options, seedLink) {
   seed = seedLink;
 };
 
-exports.up = function(db) {
-  return null;
+/* Contains code to move the database forward, or up, to the next database version */
+exports.up = function(db, callback) {
+  db.createTable('user', {
+    id: {
+      type: 'int',
+      primaryKey: true
+    },
+    full_name: {
+      type: 'string',
+      length: 40
+    },
+    dob: {
+      type: 'date'
+    },
+    email: {
+      type: 'string',
+      length: 50
+    },
+  }, function(err) {
+    if (err) return callback(err);
+    return callback();
+  });
 };
 
-exports.down = function(db) {
-  return null;
+/* Contains code to move the database backwards, or down, to the previous database
+ * version, i.e. rollback */
+exports.down = function(db, callback) {
+  db.dropTable('user', callback);
 };
 
 exports._meta = {

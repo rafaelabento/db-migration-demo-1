@@ -5,6 +5,6 @@
     "port": "3306",
     "user": "root",
     "password": "dOje5Kttq2C1CUmDhmHNANq4",
-    "database": "payment_api"
+    "database": "db-migration-demo"
   }
 }
