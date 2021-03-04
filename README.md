@@ -19,15 +19,17 @@
 
 ## Criando a aplicação de demonstração
 
-- Clone este repositório executando o comando `git clone https://github.com/pedrolacerda/db-migration-demo.git`
-  - Usuários Windows podem executar os comandos via `PowerShell` ou `Git CMD`
-- Acesse a pasta `db-migration-demo` executando `cd db-migration-demo`
+- Crie uma pasta chamada `db-migration-demo`
+  - Você pode executar o comando `mkdir db-migration-demo`)
+- Abra o seu terminal a partir desta pasta
+  - Caso você tenha criado a partir do terminal, acesse a pasta via `cd db-migration-demo`
 
 ### Instalando `Loopback 4`
 
 - Execute o comando `npm install -g @loopback/cli`
 
 ### Criando um novo projeto (opcional)
+
 - Crie um novo projeto executando o comando `lb4 app`
 - Preencha os campos requisitados no terminal. Ex:
 
@@ -165,7 +167,7 @@ Caso você execute `db-migrate down` verá que a tabela `user` foi apagada e a t
 
 Imagine que, por algum motivo, a equipe identificou a necessidade de quebrar a coluna `full_name` em `firstname` e `lastname`.
 
-Para evitar execução manual de scripts para modificação da tabela, nós vamos criar uma nova migration. Desse modo acompanhamos e versionamos todas as modificações. 
+Para evitar execução manual de scripts para modificação da tabela, nós vamos criar uma nova migration. Desse modo acompanhamos e versionamos todas as modificações.
 
 ```bash
 db-migrate create update-user
