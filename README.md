@@ -9,7 +9,13 @@
 ## Instalação `PowerShell` (apenas usuários Windows)
 
 - Acesse <https://github.com/PowerShell/PowerShell/releases/tag/v7.1.2> e baixe a última versão (arquivo `.msi`)
+  - Role a página para baixo até a sessão de `Assets`
 - Execute o instalador e proceda com o wizard de instalação até o fim mantendo as configurações padrão
+
+## Instalação `git` (apenas usuários Windows)
+
+- Acesse <https://git-scm.com/download/win> e baixe a última versão do instalador
+- Proceda com o wizard de instalação até o fim mantendo as configurações padrão
 
 ## Instalação `db-migrate`
 
