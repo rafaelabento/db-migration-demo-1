@@ -104,7 +104,7 @@ Um script de migração representa uma nova versão, ou estado, do nosso banco d
 
 ### Criando uma nova tabela de Usuários
 
-Vamos criar uma nova tabela usando nosso script de migração. Altere o arquivo de migração para que as funções ```javascript exports.up``` e ```javascript exports.up``` tenham o seguinte conteúdo:
+Vamos criar uma nova tabela usando nosso script de migração. Altere o arquivo de migração para que as funções `exports.up` e `exports.down` tenham o seguinte conteúdo:
 
 ```javascript
 exports.up = function(db, callback) {
@@ -129,6 +129,7 @@ exports.up = function(db, callback) {
     return callback();
   });
 };
+
 exports.down = function(db, callback) {
   db.dropTable('user', callback);
 };
@@ -157,3 +158,5 @@ Caso você execute novamente `db-migrate up` verá que a migração não será e
 ```
 
 Isto porque o `db-migrate` framework monitora quais scripts foram executados em uma tabela separada chamada `migrations`.
+
+Caso você execute `db-migrate down` verá que a tabela `user` foi apagada e a tabela `migrations` não contém nenhuma linha.
