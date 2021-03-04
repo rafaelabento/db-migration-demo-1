@@ -58,17 +58,33 @@ Em seguida serão criados diretórios e arquivos padrão para o projeto e també
   - Você deverá criar uma senha para o usuário `root`
 - Baixe a ultima versão do [`MySQL Workbench`](https://www.mysql.com/products/workbench/) acessando o link <https://dev.mysql.com/downloads/workbench/> e siga o processo de instalação padrão até o fim
 - Verifique se o MySQL está rodando `mysqladmin` em seguida insira sua senha. Você deve receber uma confirmação ```mysqld is alive```
+  - Caso o seu MySQL não esteja rodando, execute: `$ sudo service mysql start`
 
 ### Criando um schema
 
 - Abra o MySQL Workbench e selecione a instância local, insira a senha que você definiu para o `root`
-- 
+
 ![image](https://user-images.githubusercontent.com/609076/110030723-d4ec3580-7d14-11eb-8966-3e2b335bf9b4.png)
 
 - Selecione a aba `Schemas` clique com o botão direito no campo `Schemas` e selecione a opção `Create Schema...`
-- 
+
 ![image](https://user-images.githubusercontent.com/609076/110030963-1977d100-7d15-11eb-9e23-65c2ba67f994.png)
 
 - Em `Schema Name` insira: `db-migration-demo`. Selecione `Apply` e em seguida, no pop-up, selecione `Apply` novamente. Em seguida clique em `Close`. Pronto, nosso Schema foi criado.
 
- 
+### Conectando `node-db-migrate` ao nosso Banco de Dados
+
+- Na pasta `db-migration-demo`, crie um arquivo chamado `database.json` e insira o seguinte conteúdo
+
+```json
+{
+  "dev": {
+    "driver": "mysql",
+    "host": "localhost",
+    "port": "3306",
+    "user": "root",
+    "password": "<sua_senha",
+    "database": "payment_api"
+  }
+}
+```
