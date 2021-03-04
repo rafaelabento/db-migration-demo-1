@@ -104,7 +104,7 @@ Um script de migração representa uma nova versão, ou estado, do nosso banco d
 
 ### Criando uma nova tabela de Usuários
 
-Vamos criar uma nova tabela usando nosso script de migração. Altere o arquivo de migração para que as funções `exports.up` e `exports.down` tenham o seguinte conteúdo:
+Vamos criar uma nova tabela usando nosso script de migração. Altere o arquivo de migração para que as funções `up` e `down` tenham o seguinte conteúdo:
 
 ```javascript
 exports.up = function(db, callback) {
@@ -160,3 +160,61 @@ Caso você execute novamente `db-migrate up` verá que a migração não será e
 Isto porque o `db-migrate` framework monitora quais scripts foram executados em uma tabela separada chamada `migrations`.
 
 Caso você execute `db-migrate down` verá que a tabela `user` foi apagada e a tabela `migrations` não contém nenhuma linha.
+
+### Alterando o esquema de dados
+
+Imagine que, por algum motivo, a equipe identificou a necessidade de quebrar a coluna `full_name` em `firstname` e `lastname`.
+
+Para evitar execução manual de scripts para modificação da tabela, nós vamos criar uma nova migration. Desse modo acompanhamos e versionamos todas as modificações. 
+
+```bash
+db-migrate create update-user
+[INFO] Created migration at /db-migration-demo/db-migration-demo/migrations/20210304222839-update-user.js
+```
+
+Nós queremos aplicar as seguintes modificações:
+
+1. Adicionar uma nova coluna chamada `firstname`
+2. Adicionar uma nova coluna chamada `lastname`
+3. Mover os dados da coluna `full_name` para as colunas `firstname` e `lastname` separadamente (não faz parte do exercício mas iremos discutir)
+4. Remover a antiga coluna chamada `full_name`
+
+Altere o novo arquivo de migração para que as funções `up` e `down` seja as seguintes:
+
+```javascript
+exports.up = function (db, callback) {
+  db.addColumn('user', 'firstname', {
+    type: 'string',
+    length: 50
+  }, function(err) {
+    if (err) return callback(err);
+    
+    db.addColumn('user', 'lastname', {
+      type: 'string',
+      length: 50
+    }, function(err) {
+      if (err) return callback(err);
+      db.removeColumn('user', 'full_name', callback);
+    });
+  });
+};
+exports.down = function (db, callback) {
+  db.addColumn('user', 'full_name', {
+    type: 'string',
+    length: 50
+  }, function(err) {
+    if (err) return callback(err);
+    
+    db.removeColumn('user', 'lastname', function(err) {
+      if (err) return callback(err);
+      db.removeColumn('user', 'firstname', callback)
+    });
+  });
+};
+```
+
+Execute `db-migrate up` para validar as migrações
+
+```bash
+
+```
