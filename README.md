@@ -2,9 +2,9 @@
 
 ## Instalação `Node.js`
 
-1- Acesse https://nodejs.org e baixe a útlima versão LTS do Node.js
-2- Proceda com o wizard de instalação até o fim mantendo as configurações padrão
-3- Verifique sua instalação executando no terminal `node -v`
+1 - Acesse https://nodejs.org e baixe a útlima versão LTS do Node.js
+2 - Proceda com o wizard de instalação até o fim mantendo as configurações padrão
+3 - Verifique sua instalação executando no terminal `node -v`
 
 ## Instalação `PowerShell` (apenas usuários Windows)
 
