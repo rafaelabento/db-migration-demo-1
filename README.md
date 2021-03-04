@@ -99,3 +99,5 @@ db-migrate create user
 ```
 
 Um script de migração representa uma nova versão, ou estado, do nosso banco de dados. Após executar o comando acima, um novo diretório é criado, contendo um novo arquivo `.js`.
+
+![image](https://user-images.githubusercontent.com/609076/110032821-5e9d0280-7d17-11eb-9be9-47b1f440065b.png)
