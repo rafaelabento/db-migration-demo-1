@@ -61,4 +61,10 @@ Em seguida serão criados diretórios e arquivos padrão para o projeto e també
 
 ### Criando um schema
 
-- Abra o MySQL Workbench e selecione a instância local
+- Abra o MySQL Workbench e selecione a instância local, insira a senha que você definiu para o `root`
+![image](https://user-images.githubusercontent.com/609076/110030723-d4ec3580-7d14-11eb-8966-3e2b335bf9b4.png)
+- Selecione a aba `Schemas` clique com o botão direito no campo `Schemas` e selecione a opção `Create Schema...`
+![image](https://user-images.githubusercontent.com/609076/110030963-1977d100-7d15-11eb-9e23-65c2ba67f994.png)
+- Em `Schema Name` insira: `db-migration-demo`. Selecione `Apply` e em seguida, no pop-up, selecione `Apply` novamente. Em seguida clique em `Close`. Pronto, nosso Schema foi criado.
+
+ 
