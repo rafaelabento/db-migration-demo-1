@@ -60,3 +60,5 @@ Em seguida serão criados diretórios e arquivos padrão para o projeto e també
 - Verifique se o MySQL está rodando `mysqladmin` em seguida insira sua senha. Você deve receber uma confirmação ```mysqld is alive```
 
 ### Criando um schema
+
+- Abra o MySQL Workbench e selecione a instância local
