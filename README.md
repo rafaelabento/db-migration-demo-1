@@ -31,6 +31,7 @@
 ### Criando um novo projeto
 
 - Crie um novo projeto executando o comando `lb4 app`
+  - **Usuários Windows**: Caso não funcione via `Git BASH`, execute o comando utilizando o `cmd` tradicional
 - Preencha os campos requisitados no terminal. Ex:
 
 ```bash
