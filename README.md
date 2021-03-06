@@ -6,7 +6,7 @@
 - Proceda com o wizard de instalação até o fim mantendo as configurações padrão
 - Verifique sua instalação executando no terminal `node -v`
 
-## Instalando `PowerShell` (apenas usuários Windows)
+## Instalando `PowerShell` (apenas usuários Windows - opcional)
 
 - Acesse <https://github.com/PowerShell/PowerShell/releases/tag/v7.1.2> e baixe a última versão (arquivo `.msi`)
   - Role a página para baixo até a sessão de `Assets`
@@ -20,7 +20,7 @@
 ## Criando a aplicação de demonstração
 
 - Crie uma pasta chamada `db-migration-demo`
-  - Você pode executar o comando `mkdir db-migration-demo`)
+  - Você pode executar o comando `mkdir db-migration-demo`
 - Abra o seu terminal a partir desta pasta
   - Caso você tenha criado a partir do terminal, acesse a pasta via `cd db-migration-demo`
 
