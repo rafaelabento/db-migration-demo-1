@@ -57,7 +57,7 @@ Em seguida serão criados diretórios e arquivos padrão para o projeto e també
 
 ## Instalando MySQL
 
-- Baixe a última versão do [`MySQL Community Server`](https://dev.mysql.com/downloads/mysql/) acessando o link <https://dev.mysql.com/downloads/mysql/> e siga o processo de instalação padrão até o fim.
+- Baixe a última versão do [`MySQL Community Server`](https://dev.mysql.com/downloads/mysql/) acessando o link <https://dev.mysql.com/downloads/installer/> e siga o processo de instalação padrão até o fim.
   - Você deverá criar uma senha para o usuário `root`
 - Baixe a ultima versão do [`MySQL Workbench`](https://www.mysql.com/products/workbench/) acessando o link <https://dev.mysql.com/downloads/workbench/> e siga o processo de instalação padrão até o fim.
   - Baixe a versão mais completa do instalador (~400MB).
