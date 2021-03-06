@@ -59,7 +59,8 @@ Em seguida serão criados diretórios e arquivos padrão para o projeto e també
 
 - Baixe a última versão do [`MySQL Community Server`](https://dev.mysql.com/downloads/mysql/) acessando o link <https://dev.mysql.com/downloads/mysql/> e siga o processo de instalação padrão até o fim.
   - Você deverá criar uma senha para o usuário `root`
-- Baixe a ultima versão do [`MySQL Workbench`](https://www.mysql.com/products/workbench/) acessando o link <https://dev.mysql.com/downloads/workbench/> e siga o processo de instalação padrão até o fim
+- Baixe a ultima versão do [`MySQL Workbench`](https://www.mysql.com/products/workbench/) acessando o link <https://dev.mysql.com/downloads/workbench/> e siga o processo de instalação padrão até o fim.
+  - Baixe a versão mais completa do instalador (~400MB).
 - Verifique se o MySQL está rodando `mysqladmin` em seguida insira sua senha. Você deve receber uma confirmação ```mysqld is alive```
   - Caso o seu MySQL não esteja rodando, execute: `$ sudo service mysql start`
 
