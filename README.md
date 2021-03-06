@@ -1,6 +1,6 @@
 # Database migration demo
 
-## Instalando `Node.js`
+## Instalando `Node.js` > 10.16
 
 - Acesse <https://nodejs.org> e baixe a útlima versão LTS do Node.js
 - Proceda com o wizard de instalação até o fim mantendo as configurações padrão
