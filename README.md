@@ -142,7 +142,7 @@ exports.down = function(db, callback) {
 Este script deve criar uma nova tabela quando nós movemos a versão do banco de dados para a frente (`up`) e deletar a tabela quando revertermos (`down`).
 
 - Execute `db-migrate up` para testar o script.
-  - Caso o script lance um erro de conexão, execute as seguintes queries
+  - 🚨 Caso o script lance um erro de conexão, execute as seguintes queries
     - `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'` - substituia `password` pela sua senha do BD
     - `flush privileges;`
 
