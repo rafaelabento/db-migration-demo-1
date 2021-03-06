@@ -20,7 +20,7 @@
 ## Criando a aplicação de demonstração
 
 - Crie uma pasta chamada `db-migration-demo`
-  - Você pode executar o comando `mkdir db-migration-demo`)
+  - Você pode executar o comando `mkdir db-migration-demo`
 - Abra o seu terminal a partir desta pasta
   - Caso você tenha criado a partir do terminal, acesse a pasta via `cd db-migration-demo`
 
