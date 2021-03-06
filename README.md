@@ -28,7 +28,7 @@
 
 - Execute o comando `npm install -g @loopback/cli`
 
-### Criando um novo projeto (opcional)
+### Criando um novo projeto
 
 - Crie um novo projeto executando o comando `lb4 app`
 - Preencha os campos requisitados no terminal. Ex:
