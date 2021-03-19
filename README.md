@@ -21,11 +21,14 @@
 
 - Crie uma pasta chamada `db-migration-demo`
   - Você pode executar o comando 
+
 ```shell
 mkdir db-migration-demo
 ```
+
 - Abra o seu terminal a partir desta pasta
   - Caso você tenha criado a partir do terminal, acesse a pasta via 
+
 ```shell
 cd db-migration-demo
 ```
@@ -33,6 +36,7 @@ cd db-migration-demo
 ### Instalando `Loopback 4`
 
 - Execute o comando 
+
 ```shell
 npm install -g @loopback/cli
 ```
@@ -40,9 +44,11 @@ npm install -g @loopback/cli
 ### Criando um novo projeto
 
 - Crie um novo projeto executando o comando
+
 ```shell
 lb4 app
 ```
+
   - **Usuários Windows**: Caso não funcione via `Git BASH`, execute o comando utilizando o `cmd` tradicional
 - Preencha os campos requisitados no terminal. Ex:
 
@@ -58,23 +64,30 @@ lb4 app
 Em seguida serão criados diretórios e arquivos padrão para o projeto e também executado `npm install` para configuração das dependências.
 
 - Acesse a pasta do projeto 
+
 ```shell
 cd db-migration-demo
 ```
+
 - Execute 
+
 ```shell
 npm start
 ```
+
 - Acesse <http://127.0.0.1:3000/>
 
 ## Instalando `db-migrate`
 
 - Acesse o diretório `db-migration-demo` dentro do repositório de mesmo nome (`db-migration-demo/db-migration-demo`)
 - Instale o framework `db-migrate` executando
+
 ```shell
 npm install -g db-migrate
 ```
+
 - Nós vamos utilizar um banco de dados MySQL, portanto é necessária a instalação do pacote que fará a gestão das conexões por nós
+
 ```shell
 npm install --save db-migrate-mysql
 ```
@@ -167,13 +180,16 @@ Este script deve criar uma nova tabela quando nós movemos a versão do banco de
 
 - Execute `db-migrate up` para testar o script.
   - 🚨 Caso o script lance um erro de conexão, execute as seguintes queries:
+
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'
 ```
+
 - Substituia `password` pela sua senha do BD. Em seguida:
+
 ```sql
 flush privileges;
-
+```
 
 Você receberá a seguinte confirmação:
 
